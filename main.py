@@ -63,9 +63,16 @@ class Application:
     except Exception as e:
       print(e)
       print('Error al insertar a la base de datos')
+    
+  def mostrar_menu(self):
+    print('1. Convertir')
+    print('2. Mostrar resultados')
+    print('3. Agregar resultados a la base de datos')
+    print('4. Salir \n')
 
   def main(self):
     while True:
+      self.mostrar_menu()
       response = input('Selecciona una opción: ')
       if response == '1':
         self.convert()
@@ -75,6 +82,8 @@ class Application:
         self.add_to_database()
       elif response == '4':
         break
+      else:
+        print('Ingresa una opcion valida')
 
 
 
